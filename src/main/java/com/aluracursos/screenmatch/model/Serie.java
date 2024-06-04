@@ -15,11 +15,13 @@ public class Serie {
     private String titulo;
     private Integer totalDeTemporadas;
     private Double evaluacion;
+    private String poster;
     @Enumerated(EnumType.STRING)
     private Categoria genero;
-    private String sinopsis;
-    private String poster;
     private String actores;
+    private String sinopsis;
+
+
     @OneToMany( mappedBy = "serie", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Episodio> episodios;
 
